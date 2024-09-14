@@ -23,10 +23,11 @@ export const useWeatherStore = create((set) => ({
             const maxTemp = data.daily.temperature_2m_max[0]; // Máxima del día
             const minTemp = data.daily.temperature_2m_min[0]; // Mínima del día
             const warnings = [];
+            const time = data.daily.timezone;
 
             // Genera una advertencia si la temperatura sube significativamente
             if (currentTemp < maxTemp) {
-                warnings.push(`La temperatura puede aumentar de ${currentTemp}°C a ${maxTemp}°C en la noche. Quizas debas aplicar un protector solar`);
+                warnings.push(`La temperatura puede subir de ${currentTemp}°C a un pico de ${maxTemp}°C. Quizas debas aplicar un protector solar`);
             }
             // Genera una advertencia si la temperatura bajará significativamente
             if (currentTemp > minTemp) {

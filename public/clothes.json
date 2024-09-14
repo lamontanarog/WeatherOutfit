@@ -1,0 +1,102 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Chaqueta de cuero",
+            "category": "womens-jackets",
+            "price": 120,
+            "climate": "frío",
+            "thumbnail": "https://dorianargentina.com/wp-content/uploads/2022/12/Louisiana-1.jpg",
+            "description": "Chaqueta de cuero negro ideal para días fríos y ventosos."
+        },
+        {
+            "id": 2,
+            "title": "Vestido de verano",
+            "category": "womens-dresses",
+            "price": 75,
+            "climate": "soleado",
+            "thumbnail": "https://c1.klipartz.com/pngpicture/430/972/sticker-png-background-floral-dress-clothing-sundress-fashion-casual-wear-mini-saya-spaghetti-strap-thumbnail.png",
+            "description": "Vestido ligero y colorido, perfecto para días soleados."
+        },
+        {
+            "id": 3,
+            "title": "Abrigo de lana",
+            "category": "womens-coats",
+            "price": 150,
+            "climate": "frío extremo",
+            "thumbnail": "https://w7.pngwing.com/pngs/351/573/png-transparent-coat-beige-wool-span-and-div-woolen-beige-coat-thumbnail.png",
+            "description": "Abrigo largo de lana, ideal para temperaturas bajo cero."
+        },
+        {
+            "id": 4,
+            "title": "Pantalones impermeables",
+            "category": "womens-pants",
+            "price": 90,
+            "climate": "lluvioso",
+            "thumbnail": "https://e7.pngegg.com/pngimages/120/646/png-clipart-rain-pants-clothing-country-innovation-waistcoat-discontinued-merrell-shoes-for-women-angelica-waistcoat-active-pants.png",
+            "description": "Pantalones resistentes al agua para días lluviosos."
+        },
+        {
+            "id": 5,
+            "title": "Blusa de algodón",
+            "category": "womens-tops",
+            "price": 40,
+            "climate": "templado",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNf3oWx8EwdBmf2D_6Uz3kUCoFp47BY8uSg&s",
+            "description": "Blusa ligera de algodón, cómoda para días templados."
+        },
+        {
+            "id": 6,
+            "title": "Botas de cuero",
+            "category": "womens-shoes",
+            "price": 110,
+            "climate": "lluvioso",
+            "thumbnail": "https://w7.pngwing.com/pngs/587/1017/png-transparent-motorcycle-boot-dr-martens-shoe-patent-leather-boot-leather-fashion-boots.png",
+            "description": "Botas de cuero impermeables perfectas para lluvia y clima húmedo."
+        },
+        {
+            "id": 7,
+            "title": "Falda midi",
+            "category": "womens-skirts",
+            "price": 60,
+            "climate": "soleado",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZKzM5QyNpU8QksZpx2HJDL3aOMRVYtYudQ&s",
+            "description": "Falda midi ideal para días soleados y cálidos."
+        },
+        {
+            "id": 8,
+            "title": "Sudadera con capucha",
+            "category": "womens-hoodies",
+            "price": 65,
+            "climate": "frío",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCao0A8iH52VlrPK8gvG3Tsq9K11mvmNcgpw&s",
+            "description": "Sudadera de algodón con capucha, perfecta para días frescos."
+        },
+        {
+            "id": 9,
+            "title": "Gorro de lana",
+            "category": "womens-accessories",
+            "price": 20,
+            "climate": "frío extremo",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhext8yK8J57C96x2H6Muk55p2bMeusnDzJg&s",
+            "description": "Gorro de lana abrigado para protegerse del frío intenso."
+        },
+        {
+            "id": 10,
+            "title": "Sandalias",
+            "category": "womens-shoes",
+            "price": 35,
+            "climate": "soleado",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmifhuGFfnZEBkPAbVcNBoRO7hnz9Pid41vw&s",
+            "description": "Sandalias cómodas para días soleados y cálidos."
+        },
+        {
+            "id": 11,
+            "title": "Vestido de verano",
+            "category": "womens-dresses",
+            "price": 80,
+            "climate": "templado",
+            "thumbnail": "https://img.lovepik.com/free-png/20220106/lovepik-summer-dress-png-image_401183282_wh860.png"
+        }
+    ]
+}
