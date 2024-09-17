@@ -29,11 +29,27 @@ export const useWeatherStore = create((set) => ({
 
             const currentTemp = data.current_weather.temperature;
             const currentCategory = useWeatherStore.getState().categorizeTemperature(currentTemp);
+            const maxTemp = data.daily.temperature_2m_max[0];
+            const minTemp = data.daily.temperature_2m_min[0];
+            const warnings = [];
+            const currentHour = new Date().getHours();
+
+            if (currentTemp < maxTemp && currentHour < 19) {
+                warnings.push(`La temperatura actual es ${currentTemp}°C, pero puede subir hasta ${maxTemp}°C hoy. Quizás debas aplicar un protector solar.`)
+            }
+            if (currentTemp > minTemp && currentHour > 6) {
+                warnings.push(`La temperatura actual es ${currentTemp}°C, pero puede bajar hasta ${minTemp}°C hoy. Quizás debas llevar un abrigo.`)
+            set({ warnings, isLoading: false });
+            }
+
+
+            console.log(warnings);
 
             set({
                 weatherData: {
                     ...data.current_weather,
                     category: currentCategory,
+                    warnings: warnings,
                 },
                 isLoading: false,
             });
