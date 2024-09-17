@@ -1,11 +1,19 @@
-import { create } from 'zustand';
+"use client";
+import { create } from "zustand";
 
 export const useWeatherStore = create((set) => ({
     weatherData: null,
-    dailyForecast: null,
     warnings: [],
     isLoading: false,
     error: null,
+
+    categorizeTemperature: (temp) => {
+        if (temp > 25) return "Caluroso";
+        if (temp >= 15 && temp <= 24) return "Soleado";
+        if (temp >= 9 && temp < 15) return "Templado";
+        if (temp >= 0 && temp < 9) return "Frío";
+        return "Mucho frío";
+    },
 
     fetchWeather: async () => {
         set({ isLoading: true, error: null });
@@ -20,25 +28,13 @@ export const useWeatherStore = create((set) => ({
             }
 
             const currentTemp = data.current_weather.temperature;
-            const maxTemp = data.daily.temperature_2m_max[0]; // Máxima del día
-            const minTemp = data.daily.temperature_2m_min[0]; // Mínima del día
-            const warnings = [];
-            const time = data.daily.timezone;
-
-            // Genera una advertencia si la temperatura sube significativamente
-            if (currentTemp < maxTemp) {
-                warnings.push(`La temperatura puede subir de ${currentTemp}°C a un pico de ${maxTemp}°C. Quizas debas aplicar un protector solar`);
-            }
-            // Genera una advertencia si la temperatura bajará significativamente
-            if (currentTemp > minTemp) {
-                warnings.push(`La temperatura puede caer de ${currentTemp}°C a ${minTemp}°C en la noche. Quizas debas llevar un abrigo`);
-            }
-
+            const currentCategory = useWeatherStore.getState().categorizeTemperature(currentTemp);
 
             set({
-                weatherData: data.current_weather,
-                dailyForecast: data.daily,
-                warnings,
+                weatherData: {
+                    ...data.current_weather,
+                    category: currentCategory,
+                },
                 isLoading: false,
             });
         } catch (error) {

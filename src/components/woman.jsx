@@ -1,59 +1,30 @@
 "use client";
 import { useProductStore } from "../store/apiClothes.js";
-import { useEffect, useState } from "react";
+import { useWeatherStore } from "../store/apiStore.js"; // Importamos el store del clima
+import { useEffect } from "react";
 
 function WomanClothes() {
     const { product, fetchRandomProduct, loading, error } = useProductStore();
-    const [selectCategory, setSelectCategory] = useState(null)
+    const { weatherData, fetchWeather } = useWeatherStore(); // Obtenemos el estado del clima
 
-    const handleCategoryClick = (category) => {
-        setSelectCategory(category);
-        fetchRandomProduct(category);
-
-    };
-
+    // Al montar el componente, obtenemos el clima y productos automáticamente
     useEffect(() => {
-        if (selectCategory) {
-            fetchRandomProduct(selectCategory);
+        fetchWeather(); // Llama a la API para obtener el clima actual
+    }, []);
+
+    // Cuando el clima se actualiza, obtenemos productos aleatorios según el clima
+    useEffect(() => {
+        if (weatherData) {
+            fetchRandomProduct(); // Filtra productos y selecciona uno aleatorio
         }
-        
-    }, [selectCategory]);
+    }, [weatherData]);
 
-    if(loading) return <p>Loading...</p>
-    if(error) return <p>{error}</p>
-
-    // Lista de categorías
-    const categories = [
-        { name: "chaquetas", value: "womens-jackets" },
-        { name: "Vestido", value: "womens-dresses" },
-        { name: "abrigo", value: "womens-coats" },
-        { name: "pantalon", value: "womens-pants" },
-        { name: "blusas", value: "womens-tops" },
-        { name: "zapatos", value: "womens-shoes" },
-        { name: "sudaderas", value: "womens-hoodies" },
-        { name: "faldas", value: "womens-skirts" },
-        { name: "accesorios", value: "womens-accessories" },
-
-    ];
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error}</p>;
 
     return (
         <div>
-            <h1>Elige una categoría</h1>
-            <div>
-                {categories.map((category) => (
-                    <button
-                        key={category.value}
-                        onClick={() => handleCategoryClick(category.value)}
-                        style={{ margin: "10px", padding: "10px" }}
-                    >
-                        {category.name}
-                    </button>
-                ))}
-            </div>
-
-            {/* Mostrar el producto seleccionado */}
-            {loading && <p>Loading...</p>}
-            {error && <p>{error}</p>}
+            <h1>Recomendación de producto según el clima</h1>
             {product && (
                 <div style={{ marginTop: "20px" }}>
                     <h2>{product.title}</h2>
@@ -62,6 +33,8 @@ function WomanClothes() {
                         alt={product.title}
                         style={{ width: "150px", height: "200px" }}
                     />
+                    <p>{product.description}</p>
+                    <p>{product.price} USD</p>
                 </div>
             )}
         </div>
