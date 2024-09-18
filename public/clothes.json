@@ -4,97 +4,76 @@
             "id": 1,
             "title": "Chaqueta de cuero",
             "category": "womens-jackets",
-            "price": 120,
-            "climate": "frío",
-            "thumbnail": "https://dorianargentina.com/wp-content/uploads/2022/12/Louisiana-1.jpg",
-            "description": "Chaqueta de cuero negro ideal para días fríos y ventosos."
+            "climate": "frio",
+            "thumbnail": "https://dorianargentina.com/wp-content/uploads/2022/12/Louisiana-1.jpg"
         },
         {
             "id": 2,
             "title": "Vestido de verano",
             "category": "womens-dresses",
-            "price": 75,
             "climate": "soleado",
-            "thumbnail": "https://c1.klipartz.com/pngpicture/430/972/sticker-png-background-floral-dress-clothing-sundress-fashion-casual-wear-mini-saya-spaghetti-strap-thumbnail.png",
-            "description": "Vestido ligero y colorido, perfecto para días soleados."
+            "thumbnail": "https://c1.klipartz.com/pngpicture/430/972/sticker-png-background-floral-dress-clothing-sundress-fashion-casual-wear-mini-saya-spaghetti-strap-thumbnail.png"
         },
         {
             "id": 3,
             "title": "Abrigo",
             "category": "womens-coats",
-            "price": 150,
-            "climate": "frío extremo",
-            "thumbnail": "https://d22fxaf9t8d39k.cloudfront.net/c0fa7ea7a99b98fad74cda6853690eaea2c35445f19aac246c131bb6e12f609436514.png",
-            "description": "Abrigo comodo, ideal para noches de verano"
+            "climate": "mucho frio",
+            "thumbnail": "https://d22fxaf9t8d39k.cloudfront.net/c0fa7ea7a99b98fad74cda6853690eaea2c35445f19aac246c131bb6e12f609436514.png"
         },
         {
             "id": 4,
             "title": "Pantalones impermeables",
             "category": "womens-pants",
-            "price": 90,
-            "climate": "lluvioso",
-            "thumbnail": "https://e7.pngegg.com/pngimages/120/646/png-clipart-rain-pants-clothing-country-innovation-waistcoat-discontinued-merrell-shoes-for-women-angelica-waistcoat-active-pants.png",
-            "description": "Pantalones resistentes al agua para días lluviosos."
+            "climate": "frio",
+            "thumbnail": "https://e7.pngegg.com/pngimages/120/646/png-clipart-rain-pants-clothing-country-innovation-waistcoat-discontinued-merrell-shoes-for-women-angelica-waistcoat-active-pants.png"
         },
         {
             "id": 5,
             "title": "Blusa de algodón",
             "category": "womens-tops",
-            "price": 40,
-            "climate": "templado",
-            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNf3oWx8EwdBmf2D_6Uz3kUCoFp47BY8uSg&s",
-            "description": "Blusa ligera de algodón, cómoda para días templados."
+            "climate": "Frio",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmNf3oWx8EwdBmf2D_6Uz3kUCoFp47BY8uSg&s"
         },
         {
             "id": 6,
             "title": "Botas de cuero",
             "category": "womens-shoes",
-            "price": 110,
             "climate": "lluvioso",
-            "thumbnail": "https://w7.pngwing.com/pngs/587/1017/png-transparent-motorcycle-boot-dr-martens-shoe-patent-leather-boot-leather-fashion-boots.png",
-            "description": "Botas de cuero impermeables perfectas para lluvia y clima húmedo."
+            "thumbnail": "https://w7.pngwing.com/pngs/587/1017/png-transparent-motorcycle-boot-dr-martens-shoe-patent-leather-boot-leather-fashion-boots.png"
         },
         {
             "id": 7,
             "title": "Falda midi",
             "category": "womens-skirts",
-            "price": 60,
             "climate": "soleado",
-            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZKzM5QyNpU8QksZpx2HJDL3aOMRVYtYudQ&s",
-            "description": "Falda midi ideal para días soleados y cálidos."
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZKzM5QyNpU8QksZpx2HJDL3aOMRVYtYudQ&s"
         },
         {
             "id": 8,
             "title": "Sudadera con capucha",
             "category": "womens-coats",
-            "price": 65,
-            "climate": "frío",
-            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCao0A8iH52VlrPK8gvG3Tsq9K11mvmNcgpw&s",
-            "description": "Sudadera de algodón con capucha, perfecta para días frescos."
+            "climate": "frio",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCao0A8iH52VlrPK8gvG3Tsq9K11mvmNcgpw&s"
         },
         {
             "id": 9,
             "title": "boina aestetic",
             "category": "womens-accessories",
-            "price": 20,
-            "climate": "frío extremo",
-            "thumbnail": "https://e7.pngegg.com/pngimages/149/889/png-clipart-black-hat-black-beret-cloche-hat-military-beret-hat-hat-fashion-thumbnail.png",
-            "description": "Gorro de lana abrigado para protegerse del frío intenso."
+            "climate": "mucho frio",
+            "thumbnail": "https://e7.pngegg.com/pngimages/149/889/png-clipart-black-hat-black-beret-cloche-hat-military-beret-hat-hat-fashion-thumbnail.png"
         },
         {
             "id": 10,
             "title": "Sandalias",
             "category": "womens-shoes",
-            "price": 35,
             "climate": "soleado",
-            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmifhuGFfnZEBkPAbVcNBoRO7hnz9Pid41vw&s",
-            "description": "Sandalias cómodas para días soleados y cálidos."
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmifhuGFfnZEBkPAbVcNBoRO7hnz9Pid41vw&s"
         },
         {
             "id": 11,
             "title": "Vestido de verano",
             "category": "womens-dresses",
-            "price": 80,
             "climate": "templado",
             "thumbnail": "https://img.lovepik.com/free-png/20220106/lovepik-summer-dress-png-image_401183282_wh860.png"
         },
@@ -102,55 +81,64 @@
             "id": 14,
             "title": "Blusa mariposa de algodón",
             "category": "womens-tops",
-            "price": 40,
             "climate": "soleado",
-            "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_628987-MLA54727830552_032023-O.webp",
-            "description": "Blusa ligera de algodón, perfecta para días calurosos."
+            "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_628987-MLA54727830552_032023-O.webp"
         },
         {
             "id": 15,
             "title": "Falda midi de algodón",
             "category": "womens-skirts",
-            "price": 45,
             "climate": "templado",
-            "thumbnail": "https://cdn.aboutstatic.com/file/images/e0cecd2e8b7959cc08c8ac53674e5341.png?bg=F4F4F5&quality=75&trim=1&height=480&width=360",
-            "description": "Falda midi de algodón, perfecta para días templados."
+            "thumbnail": "https://cdn.aboutstatic.com/file/images/e0cecd2e8b7959cc08c8ac53674e5341.png?bg=F4F4F5&quality=75&trim=1&height=480&width=360"
         },
         {
             "id": 16,
             "title": "sombrero de verano",
             "category": "womens-accessories",
-            "price": 15,
-            "climate": "soleado",
-            "thumbnail": "https://static.vecteezy.com/system/resources/previews/009/890/711/non_2x/watercolor-summer-fashion-hat-free-png.png",
-            "description": "Gorro de algodón ligero, perfecto para protegerse del sol."
+            "climate": "caluroso",
+            "thumbnail": "https://static.vecteezy.com/system/resources/previews/009/890/711/non_2x/watercolor-summer-fashion-hat-free-png.png"
         },
         {
             "id": 17,
             "title": "Zapatos de verano",
             "category": "womens-shoes",
-            "price": 25,
             "climate": "soleado",
-            "thumbnail": "https://e7.pngegg.com/pngimages/796/925/png-clipart-sandal-shoe-blog-paisley-summer-platform-sneakers-shoes-for-women-outdoor-shoe-summer.png",
-            "description": "Zapatos de verano cómodos y frescos para climas calurosos."
+            "thumbnail": "https://e7.pngegg.com/pngimages/796/925/png-clipart-sandal-shoe-blog-paisley-summer-platform-sneakers-shoes-for-women-outdoor-shoe-summer.png"
         },
         {
             "id": 18,
             "title": "Blusa de seda",
             "category": "womens-tops",
-            "price": 60,
             "climate": "templado",
-            "thumbnail": "https://w7.pngwing.com/pngs/373/841/png-transparent-satin-shoulder-blouse-dress-satin-brown-silk-art.png",
-            "description": "Blusa de seda suave y elegante, perfecta para días templados."
+            "thumbnail": "https://w7.pngwing.com/pngs/373/841/png-transparent-satin-shoulder-blouse-dress-satin-brown-silk-art.png"
         },
         {
             "id": 19,
             "title": "Bolso de playa",
             "category": "womens-accessories",
-            "price": 20,
             "climate": "soleado",
-            "thumbnail": "https://w7.pngwing.com/pngs/858/267/png-transparent-tote-bag-amazon-com-canvas-messenger-bags-bag-blue-beach-white.png",
-            "description": "Bolso de playa resistente al agua, perfecto para llevar tus cosas al playa."
+            "thumbnail": "https://w7.pngwing.com/pngs/858/267/png-transparent-tote-bag-amazon-com-canvas-messenger-bags-bag-blue-beach-white.png"
+        },
+        {
+            "id": 20,
+            "title": "Pantalon de verano",
+            "category": "womens-pants",
+            "climate": "caluroso",
+            "thumbnail": "https://w7.pngwing.com/pngs/534/208/png-transparent-bermuda-shorts-denim-clothing-undergarment-jeans-woman-undergarment-active-shorts.png"
+        },
+        {
+            "id": 21,
+            "title": "Vestido de verano",
+            "category": "womens-dresses",
+            "climate": "caluroso",
+            "thumbnail": "https://www.patronesymoldes.com/img//LISTADO_IMG/Sport%20dress%20pattern%209686.png"
+        },
+        {
+            "id": 22,
+            "title": "top dama",
+            "category": "womens-tops",
+            "climate": "caluroso",
+            "thumbnail": "https://e7.pngegg.com/pngimages/819/299/png-clipart-t-shirt-crop-top-clothing-velvet-t-shirt-fashion-black.png"
         }
     ]
 }

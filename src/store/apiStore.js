@@ -8,12 +8,14 @@ export const useWeatherStore = create((set) => ({
     error: null,
 
     categorizeTemperature: (temp) => {
-        if (temp > 25) return "Caluroso";
-        if (temp >= 15 && temp <= 24) return "Soleado";
-        if (temp >= 9 && temp < 15) return "Templado";
-        if (temp >= 0 && temp < 9) return "Frío";
-        return "Mucho frío";
+        if (temp > 25) return "caluroso";
+        if (temp >= 18 && temp <= 24) return "soleado";
+        if (temp >= 9 && temp <= 15) return "templado";
+        if (temp >= 0 && temp < 9) return "frio";
+        return "mucho frio";
     },
+
+
 
     fetchWeather: async () => {
         set({ isLoading: true, error: null });
@@ -34,27 +36,28 @@ export const useWeatherStore = create((set) => ({
             const warnings = [];
             const currentHour = new Date().getHours();
 
+
             if (currentTemp < maxTemp && currentHour < 19) {
                 warnings.push(`La temperatura actual es ${currentTemp}°C, pero puede subir hasta ${maxTemp}°C hoy. Quizás debas aplicar un protector solar.`)
             }
             if (currentTemp > minTemp && currentHour > 6) {
                 warnings.push(`La temperatura actual es ${currentTemp}°C, pero puede bajar hasta ${minTemp}°C hoy. Quizás debas llevar un abrigo.`)
-            set({ warnings, isLoading: false });
             }
-
-
-            console.log(warnings);
 
             set({
                 weatherData: {
                     ...data.current_weather,
-                    category: currentCategory,
-                    warnings: warnings,
+                    currentCategory
                 },
+                warnings: warnings,
                 isLoading: false,
             });
+
+            console.log('currentCategory', currentCategory);
+
         } catch (error) {
             set({ error: error.message, isLoading: false });
         }
-    },
+    }
+    ,
 }));
