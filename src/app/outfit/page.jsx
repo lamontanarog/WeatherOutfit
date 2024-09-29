@@ -1,24 +1,27 @@
 "use client";
 import { useEffect } from "react";
-import { useProductStore } from "../../store/apiClothes.js";
-import { useWeatherStore } from "../../store/apiStore.js";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts, generateOutfit, selectError, selectLoading, selectOutfit } from "../../redux/productSlice";
+import { selectWeatherData, setError, setLoading, setWeatherData } from "@/redux/weatherSlice";
 
 export default function OutfitRecommendation() {
-    const { outfit, generateOutfit, loading, error } = useProductStore();
-    const { weatherData, fetchWeather } = useWeatherStore();
-
+    const dispatch = useDispatch();
+    const weatherData = useSelector(setWeatherData);
+    const outfit = useSelector(selectOutfit);
+    const loading = useSelector(setLoading);
+    const error = useSelector(setError);
 
     // Al montar el componente, obtener clima y generar el outfit
     useEffect(() => {
-        fetchWeather();
+        dispatch(fetchProducts());
 
-    }, [fetchWeather]);
+    }, [dispatch]);
 
     useEffect(() => {
         if (weatherData) {
-            generateOutfit();
+            dispatch(generateOutfit());
         }
-    }, [weatherData, generateOutfit]);
+    }, [weatherData, dispatch]);
 
 
     if (loading) return <p>Loading...</p>;

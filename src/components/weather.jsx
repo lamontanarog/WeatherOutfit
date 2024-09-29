@@ -1,16 +1,34 @@
 "use client";
-import { useWeatherStore } from "../store/apiStore.js";
+import { useDispatch, useSelector } from "react-redux";
+import {
+    setFetchData,
+    setCurrentCategory,
+    setWarnings,
+    setWeatherData,
+    setError,
+    setLoading,
+} from "../redux/slices/weatherSlice";
+// import { setClimate, setError, isLoading } from "@/redux/slices/climb";
 import { useEffect } from "react";
 
 export default function Home() {
-    const { weatherData, warnings, isLoading, error, fetchWeather, currentCategory } = useWeatherStore();
 
+    const dispatch = useDispatch();
+    const weatherData = useSelector((state) => state.weatherSlice.weatherData);
+    const warning = useSelector((state) => state.weatherSlice.warnings);
+    const loading = useSelector((state) => state.weatherSlice.loading);
+    const error = useSelector((state) => state.weatherSlice.error);
+    const currentCategory = useSelector((state) => state.weatherSlice.currentCategory);
+
+    // const hola = useSelector(setClimate.name);
+
+    console.log('data', weatherData);
 
     useEffect(() => {
-        fetchWeather();
-    }, [fetchWeather]);
+        dispatch(setFetchData());
+    }, [dispatch]);
 
-    if (isLoading) return <p>Loading...</p>;
+    if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
     return (
@@ -25,15 +43,15 @@ export default function Home() {
             {weatherData && (
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                     <p>Current Temperature: {weatherData.temperature}°C</p>
-                    <p>Category: {weatherData.currentCategory}</p>
+                    <p>Category: {currentCategory}</p>
                 </div>
             )}
 
-            {warnings.length > 0 && (
+            {warning?.length > 0 && (
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "1em" }}>
                     <h2>Temperature Warnings</h2>
                     <ul style={{ listStyleType: "none", padding: 0 }}>
-                        {warnings.map((warning, index) => (
+                        {warning.map((warning, index) => (
                             <li key={index} style={{ marginTop: "0.5em" }}>{warning}</li>
                         ))}
                     </ul>
